@@ -3,9 +3,18 @@
 // const {} is what we call object destructuring and it allows us to unpack properties from objects into variables.
 const {studentList, printStudentNames} = require("./q2-arrays-loop");
 const {convert} = require("./q3-objects");
+const {getDatabaseCredential} = require("./q1-control-flow");
+
 
 //The describe () creates a block that groups together several related tests
 describe("Demo", ()=>{
+    // Run the q1 get database credential
+    it("get database credential", () => {
+        expect(getDatabaseCredential("DEV")).toBe("devuser:password");
+        expect(getDatabaseCredential("STAGE")).toBe("stageuser:password");
+        expect(getDatabaseCredential("PROD")).toBe("produser:password");
+    })
+
     //it() describes a single test
     it("should test the printStudentNames function of q2", ()=>{
         //The spyOn creates a mock function based on the method inside, in this case console.log
