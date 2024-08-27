@@ -1,4 +1,6 @@
 const { person, school } = require("./objects");
+const { getAverageGrade } = require("./arrays");
+
 
 describe(
     "Test person and school objects",
@@ -23,6 +25,16 @@ describe(
                 expect(school["isActive"]).toBe(false);
                 expect(school["coursesOffered"].length).toBe(3);
             }
-        )
+        );
+
+        /* Test get average */
+        it(
+            "average of number",
+            () => {
+                expect(getAverageGrade([1, 1, 1])).toBe(1);
+                expect(getAverageGrade([1, 0, 1])).toBeCloseTo(0.6667);
+                expect(getAverageGrade([-1, 0, 1])).toBeCloseTo(0);
+            }
+        );
     }
 )
