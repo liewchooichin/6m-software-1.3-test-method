@@ -40,3 +40,5 @@ const school = {
 }
 
 console.log(`Welcome to ${school["name"]} and we offer ${school["coursesOffered"]}`);
+
+module.exports = { person, school };
