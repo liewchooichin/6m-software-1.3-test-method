@@ -14,3 +14,5 @@ module.exports = {
     addFunc,
     isDivisibleBy5
 }
+
+//export { addFunc, isDivisibleBy5 };

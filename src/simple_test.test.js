@@ -1,4 +1,5 @@
 const {addFunc, isDivisibleBy5} = require("./sample");
+//import { addFunc, isDivisibleBy5 } from './sample.js'
 
 describe("Test Suite for sample.js functions", ()=>{
     
